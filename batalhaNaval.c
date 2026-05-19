@@ -21,17 +21,29 @@ int main() {
     tabuleiro[5][7] = 3;
     tabuleiro[6][7] = 3;
 
- // Linha Orizontal de localização do tabuleiro usando letras.
+     //inserindo navio na diagonal da esquerda para a direita
+    // linha 2, 3 e 4, colunas A, B e C
+    tabuleiro[2][0] = 1;
+    tabuleiro[3][1] = 1;
+    tabuleiro[4][2] = 1;
+
+    //inserindo navio na diagonal da direita para a esquerda
+    // linha 0, 1 e 2, colunas J, I e H
+    tabuleiro[0][9] = 1;
+    tabuleiro[1][8] = 1;
+    tabuleiro[2][7] = 1;
+    
+ // Linha Orizontal de localização do tabuleiro usando letras
         printf("   ");
     for (i = 0; i < 10; i++) {
         printf("%2c", linha[i]); }
         printf("\n");
 
-// Coluno Vertical de localização do tabuleiro.
+// Coluno Vertical de localização do tabuleiro
     for (i = 0; i < 10; i++) {
         printf("%2d ", coluna[i]);
 
-// Imprimindo o tabuleiro completo com "0" representando o mar.
+// Imprimindo o tabuleiro completo com "0" representando o mar
     for (j = 0; j < 10; j++) {
         printf("%2d", tabuleiro[i][j]); }
         printf("\n");
